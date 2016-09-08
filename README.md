@@ -1,4 +1,4 @@
-# CassendraClusterDocker
+# CassandraClusterDocker
 A Multi-Node Cassandra Cluster Docker
 
 Versions:
