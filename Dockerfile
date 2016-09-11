@@ -11,6 +11,10 @@ RUN  curl -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://
 
 RUN curl -L http://archive.apache.org/dist/cassandra/2.0.7/apache-cassandra-2.0.7-bin.tar.gz > cassandra.tar.gz && tar -xf cassandra.tar.gz -C . && rm -f cassandra.tar.gz
 
+RUN sed -i -e 's/^cluster_name:.*/cluster_name: my_cluster/' ./apache-cassandra-2.0.7/conf/cassandra.yaml
+
+
+
 EXPOSE 7199 7000 7001 9160 9042 22 8012 61621
 
 CMD /bin/bash
