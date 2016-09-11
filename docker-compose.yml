@@ -2,17 +2,17 @@ version: '2'
 
 services:
 	cassandra-node-1:
-		image: cassandra-node:latest
+		image: cassandra_2.0.7_centos_6.6:latest
            	networks:
       			comm_net:
         			ipv4_address: 10.0.2.15
         cassandra-node-2:
-                image: cassandra-node:latest  
+                image: cassandra_2.0.7_centos_6.6:latest  
                 networks:
                         comm_net:
                                 ipv4_address: 10.0.2.16
         cassandra-node-3:
-                image: cassandra-node:latest  
+                image: cassandra_2.0.7_centos_6.6:latest  
                 networks:
                         comm_net:
                                 ipv4_address: 10.0.2.17
