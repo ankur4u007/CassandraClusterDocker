@@ -16,3 +16,11 @@ services:
                 networks:
                         comm_net:
                                 ipv4_address: 10.0.2.17
+networks:
+	comm_net:
+    		driver: bridge
+    	ipam:
+      		driver: default
+      		config:
+      		- subnet: 10.0.2.0/24
+        	gateway: 10.0.2.1
